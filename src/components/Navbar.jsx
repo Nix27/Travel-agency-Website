@@ -23,7 +23,7 @@ const Navbar = () => {
       </ul>
 
       <div className='sm:hidden flex'>
-          <AiOutlineMenu className='text-[1.3rem]' onClick={() => setToogleMenu('0px')} />
+          <AiOutlineMenu className='text-[1.3rem]' onClick={() => setToogleMenu(true)} />
 
           <div className={`${toogleMenu ? 'top-5' : 'top-[-500px]'} transition-all flex justify-center items-center w-[250px] h-[300px] absolute left-[50%] 
           translate-x-[-50%] bg-primary-white border-2 border-primary-black`}>
