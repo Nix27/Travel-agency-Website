@@ -1,4 +1,4 @@
-import { athens, dubai, lakeLouise, maldives, osaka, paris, honolulu, interlaken } from '../assets'
+import { athens, dubai, lakeLouise, maldives, osaka, paris, honolulu, interlaken, guide, location, star, defaultProfileImg } from '../assets'
 
 export const navbarLinks = [
     {
@@ -106,6 +106,63 @@ export const destinationsSection = {
             location: "Interlaken",
             rating: 4,
             image: interlaken
+        }
+    ]
+}
+
+export const whyUsSection = {
+    sectionTitle: {
+        mainTitle: "Why Us?",
+        subTitle: "Because we are the best of the best"
+    },
+    reasons: [
+        {
+            id: "rating",
+            title: "Rating",
+            text: "Our clients gave us an overall rating of 4.7",
+            image: star
+        },
+        {
+            id: "variousDestinations",
+            title: "Various destinations",
+            text: "From Sizzling Hotspots to Icy Adventures, We Offer a Diverse Range of Destinations! Your Perfect Getaway  with Our Handpicked Selection.",
+            image: location
+        },
+        {
+            id: "touristeGuide",
+            title: "Touriste guide",
+            text: "Our seasoned guides are your passport to unforgettable adventures.",
+            image: guide
+        }
+    ]
+};
+
+export const reviewsSection = {
+    sectionTitle: {
+        mainTitle: "Reviews",
+        subTitle: "Our clients said everything"
+    },
+    reviews: [
+        {
+            id: crypto.randomUUID(),
+            profileImg: defaultProfileImg,
+            nameOfClient: "Nix",
+            text: "Perfect travel agency for everything you need, best offers, destinations, guidens and prices",
+            rating: 5
+        },
+        {
+            id: crypto.randomUUID(),
+            profileImg: defaultProfileImg,
+            nameOfClient: "Pro Traveller",
+            text: "Best offers",
+            rating: 5
+        },
+        {
+            id: crypto.randomUUID(),
+            profileImg: defaultProfileImg,
+            nameOfClient: "Nicolas",
+            text: "Everything top, especially guides",
+            rating: 5
         }
     ]
 }

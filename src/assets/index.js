@@ -1,7 +1,7 @@
 import athens from './images/athens.jpg'
 import defaultProfileImg from './images/default-profile-img.png'
 import dubai from './images/dubai.jpg'
-import faq from './images/faq-img.png'
+import reviewsImg from './images/reviews-img.png'
 import honolulu from './images/honolulu.jpg'
 import interlaken from './images/interlaken.jpg'
 import lakeLouise from './images/lake louise.jpg'
@@ -11,13 +11,16 @@ import osaka from './images/osaka.jpg'
 import paris from './images/paris.jpg'
 import variousDestinationsImg from './images/various-destinations-img.png'
 import variousDestinationsImgTriangle from './images/various-destinations-img-edited.png'
+import guide from './images/guide.png'
+import location from './images/location.png'
+import star from './images/star.png'
 import homeVideo from './video/home-video.mp4'
 
 export {
     athens,
     defaultProfileImg,
     dubai,
-    faq,
+    reviewsImg,
     honolulu,
     interlaken,
     lakeLouise,
@@ -27,5 +30,8 @@ export {
     paris,
     variousDestinationsImg,
     variousDestinationsImgTriangle,
+    guide,
+    location,
+    star,
     homeVideo
 };
