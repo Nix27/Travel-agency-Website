@@ -4,9 +4,9 @@ const App = () => (
     <>
         <Navbar />
         <Home />
-        {/* <About />
+        <About />
         <Destinations />
-        <WhyUs />
+        {/* <WhyUs />
         <Reviews />
         <FAQ />
         <Footer /> */}

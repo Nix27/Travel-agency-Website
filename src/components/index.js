@@ -6,6 +6,7 @@ import WhyUs from './WhyUs'
 import Reviews from './Reviews'
 import FAQ from './FAQ'
 import Footer from './Footer'
+import SectionTitle from './SectionTitle'
 
 export {
     Navbar,
@@ -15,5 +16,6 @@ export {
     WhyUs,
     Reviews,
     FAQ,
-    Footer
+    Footer,
+    SectionTitle
 };

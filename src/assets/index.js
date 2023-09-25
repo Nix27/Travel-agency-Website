@@ -2,6 +2,8 @@ import athens from './images/athens.jpg'
 import defaultProfileImg from './images/default-profile-img.png'
 import dubai from './images/dubai.jpg'
 import faq from './images/faq-img.png'
+import honolulu from './images/honolulu.jpg'
+import interlaken from './images/interlaken.jpg'
 import lakeLouise from './images/lake louise.jpg'
 import logo from './images/logo.png'
 import maldives from './images/maldives.jpg'
@@ -16,6 +18,8 @@ export {
     defaultProfileImg,
     dubai,
     faq,
+    honolulu,
+    interlaken,
     lakeLouise,
     logo,
     maldives,
