@@ -3,8 +3,8 @@ import { Navbar, Home, About, Destinations, WhyUs, Reviews, FAQ, Footer } from '
 const App = () => (
     <>
         <Navbar />
-        {/* <Home />
-        <About />
+        <Home />
+        {/* <About />
         <Destinations />
         <WhyUs />
         <Reviews />

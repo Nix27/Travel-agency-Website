@@ -8,7 +8,7 @@ const Navbar = () => {
   const [toogleMenu, setToogleMenu] = useState(false)
 
   return (
-    <nav className='w-full flex justify-between items-center px-[2rem] py-3'>
+    <nav className='w-full flex fixed bg-primary-white justify-between items-center px-[2rem] py-3 z-10'>
       <div className='flex items-center gap-[0.875rem]'>
         <img src={logo} alt='logo' className='w-[2rem] h-[2rem]' />
         <span>GrandVist Tours</span>
