@@ -30,7 +30,7 @@ const Navbar = () => {
             <ul className='flex flex-col items-center gap-5'>
               {navbarLinks.map(navbarLink => (
                 <li key={navbarLink.id} className='hover:text-primary-green'>
-                  <a href={`#${navbarLink.id}`}>{navbarLink.text}</a>
+                  <a href={`#${navbarLink.id}`} onClick={() => setToogleMenu(false)}>{navbarLink.text}</a>
                 </li>
               ))}
             </ul>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import SectionTitle from './SectionTitle'
 import Review from './Review';
 import { reviewsSection } from '../content'
@@ -6,30 +6,22 @@ import { reviewsImg } from '../assets';
 import { Carousel, IconButton  } from "@material-tailwind/react";
 import { IoIosArrowBack } from 'react-icons/io'
 import { GrFormNext } from 'react-icons/gr'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 
-const Reviews = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1500
-    });
-  }, [])
-
-  return (
+const Reviews = () => (
   <section id='reviews' className='mt-10 flex flex-col items-center justify-center'>
     <SectionTitle title={reviewsSection.sectionTitle.mainTitle}
                   subTitle={reviewsSection.sectionTitle.subTitle} />
 
     <Carousel className="mt-10"
-              data-aos='fade-up' 
-              autoplay={true} 
-              loop={true} 
-              navigation={false}
+              autoplay={true}
+              navigation={() => (
+                <div className="hidden"></div>
+              )} 
+              loop={true}
               prevArrow={({ handlePrev }) => (
                 <IconButton
                   variant="text"
-                  color="black"
+                  color="gray"
                   size="lg"
                   onClick={handlePrev}
                   className="!absolute top-2/4 left-4 -translate-y-2/4"
@@ -40,7 +32,7 @@ const Reviews = () => {
               nextArrow={({ handleNext }) => (
                 <IconButton
                   variant="text"
-                  color="black"
+                  color="gray"
                   size="lg"
                   onClick={handleNext}
                   className="!absolute top-2/4 !right-4 -translate-y-2/4"
@@ -54,9 +46,9 @@ const Reviews = () => {
     </Carousel>
 
     <div className='flex justify-center mt-10'>
-      <img src={reviewsImg} alt='reviews image' className='w-[90%] lg:w-[100%] h-[300px] lg:h-[400px]' data-aos='fade-up' />
+      <img src={reviewsImg} alt='reviews image' className='w-[90%] lg:w-[100%] h-[300px] lg:h-[400px]' />
     </div>
   </section>
-)}
+)
 
 export default Reviews

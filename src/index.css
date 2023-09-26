@@ -12,3 +12,11 @@
 section{
   padding-top: 56px;
 }
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(180deg, #8AE353 33.85%, black 100%);
+}
