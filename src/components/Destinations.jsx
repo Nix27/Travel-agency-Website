@@ -4,7 +4,7 @@ import { destinationsSection } from '../content'
 import DestinationCard from './DestinationCard'
 
 const Destinations = () => (
-  <section className='mt-20 flex flex-col items-center justify-center md:mx-20'>
+  <section id='destinations' className='mt-10 flex flex-col items-center justify-center md:mx-20'>
     <SectionTitle title={destinationsSection.sectionTitle.mainTitle} 
                   subTitle={destinationsSection.sectionTitle.subTitle} />
 

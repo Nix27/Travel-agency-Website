@@ -7,10 +7,10 @@ const Review = ({ profileImg, nameOfClient, text, rating }) => (
             <img src={profileImg} alt='profile image' className='w-[50px] h-[50px]' />
             <span className='font-bold text-[1.1rem]'>{nameOfClient}</span>
         </div>
-        <q className='mt-3 text-center'>{text}</q>
+        <q className='mt-3 text-center text-[1.2rem] mx-2'>{text}</q>
         <div className='flex mt-3'>
             {Array.from({length: rating}, () => (
-                <AiFillStar key={crypto.randomUUID()} className='text-primary-green lg:text-[1.2rem]' />
+                <AiFillStar key={crypto.randomUUID()} className='text-primary-green lg:text-[1.3rem]' />
             ))}
         </div>
     </div>

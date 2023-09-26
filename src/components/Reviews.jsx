@@ -3,14 +3,41 @@ import SectionTitle from './SectionTitle'
 import Review from './Review';
 import { reviewsSection } from '../content'
 import { reviewsImg } from '../assets';
-import { Carousel  } from "@material-tailwind/react";
+import { Carousel, IconButton  } from "@material-tailwind/react";
+import { IoIosArrowBack } from 'react-icons/io'
+import { GrFormNext } from 'react-icons/gr'
 
 const Reviews = () => (
-  <section className='mt-20 flex flex-col items-center justify-center'>
+  <section id='reviews' className='mt-10 flex flex-col items-center justify-center'>
     <SectionTitle title={reviewsSection.sectionTitle.mainTitle}
                   subTitle={reviewsSection.sectionTitle.subTitle} />
 
-    <Carousel className="mt-10" autoplay={true} loop={true}>
+    <Carousel className="mt-10" 
+              autoplay={true} 
+              loop={true} 
+              navigation={false}
+              prevArrow={({ handlePrev }) => (
+                <IconButton
+                  variant="text"
+                  color="black"
+                  size="lg"
+                  onClick={handlePrev}
+                  className="!absolute top-2/4 left-4 -translate-y-2/4"
+                >
+                  <IoIosArrowBack className='text-[1.2rem]' />
+                </IconButton>
+              )}
+              nextArrow={({ handleNext }) => (
+                <IconButton
+                  variant="text"
+                  color="black"
+                  size="lg"
+                  onClick={handleNext}
+                  className="!absolute top-2/4 !right-4 -translate-y-2/4"
+                >
+                  <GrFormNext className='text-[1.4rem]' />
+                </IconButton>
+              )}>
       {reviewsSection.reviews.map(review => (
         <Review key={review.id} {...review} />
       ))}

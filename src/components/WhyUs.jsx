@@ -5,7 +5,7 @@ import { whyUsSection } from '../content'
 import { variousDestinationsImg, variousDestinationsImgTriangle } from '../assets'
 
 const WhyUs = () => (
-  <section className='mt-20 flex flex-col items-center justify-center'>
+  <section id='whyUs' className='mt-10 flex flex-col items-center justify-center'>
     <SectionTitle title={whyUsSection.sectionTitle.mainTitle}
                   subTitle={whyUsSection.sectionTitle.subTitle} />
 
