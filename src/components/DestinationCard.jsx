@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BiWorld } from 'react-icons/bi'
 import { FaLocationDot } from 'react-icons/fa6'
 import { AiFillStar } from 'react-icons/ai'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
-const DestinationCard = ({ id, country, location, rating, image }) => (
+const DestinationCard = ({ id, country, location, rating, image }) => {
+    useEffect(() => {
+        Aos.init({
+          duration: 1500
+        });
+      }, [])
+
+    return (
     <div className='w-[90%] h-[350px] rounded-[2.3125rem] m-auto transition-all hover:scale-90'>
-        <img src={image} alt="Destination image" className='w-full h-full rounded-[2.3125rem]' />
-        <div className='relative top-[-350px] text-primary-white w-full h-full flex flex-col justify-between'>
+        <img src={image} alt="Destination image" className='w-full h-full rounded-[2.3125rem]' data-aos="flip-left" />
+        <div className='relative top-[-350px] text-primary-white w-full h-full flex flex-col justify-between' data-aos="flip-left">
             <span className='flex items-center gap-1 p-4'>
                 <BiWorld />
                 {country}
@@ -24,6 +33,6 @@ const DestinationCard = ({ id, country, location, rating, image }) => (
             </div>
         </div>
     </div>
-)
+)}
 
 export default DestinationCard
