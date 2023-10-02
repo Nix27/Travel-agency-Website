@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { navbarLinks } from '../content'
 import { logo } from '../assets'
 import { AiOutlineMenu } from 'react-icons/ai'
+import { BsChevronLeft } from 'react-icons/bs'
 
 
 const Navbar = () => {
@@ -25,17 +26,16 @@ const Navbar = () => {
       <div className='sm:hidden flex'>
           <AiOutlineMenu className='text-[1.3rem]' onClick={() => setToogleMenu(true)} />
 
-          <div className={`${toogleMenu ? 'top-5' : 'top-[-500px]'} transition-all flex justify-center items-center w-[250px] h-[300px] absolute left-[50%] 
+          <div className={`${toogleMenu ? 'left-0' : 'left-[-500px]'} transition-all flex flex-col p-10 items-center w-[100vw] h-[100vh] absolute top-0 left-[50%] 
           translate-x-[-50%] bg-primary-white border-2 border-primary-black`}>
-            <ul className='flex flex-col items-center gap-5'>
+            <BsChevronLeft className='bg-primary-white py-1 px-2 self-start font-bold text-[3rem]' onClick={() => setToogleMenu(false)} />
+            <ul className='flex flex-col items-center gap-10'>
               {navbarLinks.map(navbarLink => (
-                <li key={navbarLink.id} className='hover:text-primary-green'>
+                <li key={navbarLink.id} className='hover:text-primary-green text-[2rem]'>
                   <a href={`#${navbarLink.id}`} onClick={() => setToogleMenu(false)}>{navbarLink.text}</a>
                 </li>
               ))}
             </ul>
-            <button className='absolute bg-primary-white border-2 py-1 px-2 border-primary-black rounded-[50%] left-[232px] top-[-10px]'
-            onClick={() => setToogleMenu(false)}>X</button>
           </div>
       </div>
     </nav>
