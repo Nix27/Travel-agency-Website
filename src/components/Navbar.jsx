@@ -3,6 +3,7 @@ import { navbarLinks } from '../content'
 import { logo } from '../assets'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { BsChevronLeft } from 'react-icons/bs'
+import { AiOutlineClose } from 'react-icons/ai'
 
 
 const Navbar = () => {
@@ -26,9 +27,9 @@ const Navbar = () => {
       <div className='sm:hidden flex'>
           <AiOutlineMenu className='text-[1.3rem]' onClick={() => setToogleMenu(true)} />
 
-          <div className={`${toogleMenu ? 'left-0' : 'left-[-1000px]'} transition-all flex flex-col p-10 items-center w-[100vw] h-[100vh] absolute top-0 left-[50%] 
+          <div className={`${toogleMenu ? 'top-0' : 'top-[-1000px]'} transition-all flex flex-col p-10 items-center w-[100vw] h-[100vh] absolute top-0 left-[50%] 
           translate-x-[-50%] bg-primary-white border-2 border-primary-black`}>
-            <BsChevronLeft className='bg-primary-white py-1 px-2 self-start font-bold text-[3rem]' onClick={() => setToogleMenu(false)} />
+            <AiOutlineClose className='bg-primary-white py-1 px-2 self-start font-bold text-[3rem]' onClick={() => setToogleMenu(false)} />
             <ul className='flex flex-col items-center gap-10'>
               {navbarLinks.map(navbarLink => (
                 <li key={navbarLink.id} className='hover:text-primary-green text-[2rem]'>
